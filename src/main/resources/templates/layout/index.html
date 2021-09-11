@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J6 - Assignment</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+	crossorigin="anonymous">
+
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+	integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+	integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+	crossorigin="anonymous"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../../assets/css/card.css">
+<script th:src="@{/assets/js/shopping-cart-app.js}"></script>
+<style type="text/css">
+.d-flex::after {
+	content: "";
+	flex: auto
+}
+</style>
+</head>
+
+<body class="container" ng-app="shopping-cart-app"
+	ng-controller="shopping-cart-ctrl" style="min-width: 1125px">
+	<!-- 	<header class=""> -->
+	<!-- 		<div class="alert alert-info">J6Store</div> -->
+	<!-- 	</header> -->
+	<nav class="">
+		<div th:replace="/layout/_menu.html"></div>
+	</nav>
+	<div class="row mb-5">
+		<article class="col-sm-9">
+			<div th:replace="${main}"></div>
+		</article>
+
+		<aside class="col-sm-3 ">
+			<div th:replace="/layout/_cart-info.html"></div>
+			<div th:replace="/layout/_category.html"></div>
+		</aside>
+	</div>
+	<div class="text-center bg-info" style="line-height: 40px;">HUNGMVPH12447
+		- JAVA 6</div>
+
+
+</body>
+
+</html>
