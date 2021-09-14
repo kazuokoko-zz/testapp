@@ -1,9 +1,0 @@
-<div xmlns:th="http://www.thymeleaf.org">
-	<div class="card">
-		<div class="card-header ">Danh mục</div>
-		<ul class="card-body">
-			<a th:each="c:${categories}" th:href="@{|/product/list?cid=${c.id}|}"
-				class="list-group-item">[[${c.name}]]</a>
-		</ul>
-	</div>
-</div>
