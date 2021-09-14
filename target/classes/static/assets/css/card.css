@@ -1,0 +1,5 @@
+.make-border{
+	border: 1px solid blue;
+	width: 100%;
+	min-width: 835px
+}
