@@ -21,9 +21,9 @@
 							style="max-width: 175px; max-height: 175px"></a>
 					</div>
 					<div
-						class="card-footer text-right d-flex flex-row justify-content-between">
-						<b class="">$[[${p.price}]]</b>
-						<button class="btn btn-sm  btn-warning"
+						class="card-footer">
+						<button class="btn btn-sm btn-light float-start">$[[${p.price}]]</button>
+						<button class="btn btn-sm  btn-warning float-end"
 							th:attr="ng-click=@{|cart.add(${p.id})|}">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 								fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
